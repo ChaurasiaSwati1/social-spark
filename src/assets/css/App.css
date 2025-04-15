@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+html {
+  font-size: 16px; /* 1rem = 16px */
+}
+:root{
+  --yellow :#ffc906;
+  --dark-yellow: #ff9800;
+  --dark-yellow-500: #eab308;
+  --primary: #0b5ed7;
+  --primary-hover: #5580ff;
+}
+body {
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  /* background-image: linear-gradient(to bottom, #527aca, #063696); */
+}
+.mainSection {
+  min-height: 100vh;
+  padding-top: 4.813rem;
+}
+.text-yellow{
+  color: var(--yellow);
+}
+.text-yellow-500{
+  color: var(--dark-yellow-500);
+}
+.text-dark-yellow{
+  color: var(--dark-yellow);
+}
+.text-primary{
+  color: var(--primary);
+}
+.btn{
+  padding: 8px 20px;
+  font-weight: 600;
+}
+.bg-yellow,
+.btn-yellow{
+  background: var(--yellow) !important;
+}
+.bg-yellow-500,
+.btn-yellow-500{
+  background: var(--dark-yellow-500) !important;
+}
+.bg-dark-yellow,
+.btn-dark-yellow{
+  background: var(--dark-yellow) !important;
+}
+.bg-primary,
+.btn-primary{
+  background: var(--primary) !important;
+}
+.btn-primary:hover{
+  background: var(--primary-hover) !important;
+}
+.header{z-index: 100;}
+.navLink{
+  padding: 6px 12px;
+  text-decoration: none;
+  color: #1e1e1e;
+  font-weight: 500;
+}
+.navLink.active{
+  color: var(--dark-yellow);
+  font-weight: 700;
+}
+.font-46 {
+  font-size: 2.875rem;
+}
+.font-34 {
+  font-size: 2.125rem;
+}
+.font-24 {
+  font-size: 1.5rem;
+}
+.font-18 {
+  font-size: 1.125rem;
+}
+.nav-toggle-btn{
+  border: 1px solid var(--dark-yellow);
+  border-radius: 4px;
+  height: 34px;
+  width: 34px;
+  display: inline-block;
+  position: relative;
+  z-index: 100;
+}
+.nav-toggle-btn.fixed-btn{
+  position: fixed;
+  right: 12px;
+  top: 22px;
+}
+.nav-links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform .6s ease;
+  z-index: 99;
+  background: rgba(30, 30, 30, 0.253);
+}
+.nav-links .nav-menu-sec{
+  height: 100vh;
+  width: 220px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: .6rem 0;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+}
+.nav-links.open{
+  transform: translateX(0);
+}
+
+.nav-links .navLink {
+  margin-bottom: .5rem;
+  text-decoration: none;
+  color: #1e1e1e;
+  transition: color 0.3s;
+}
+
+.nav-links .navLink:hover {
+  color: #ffae00; /* your dark-yellow */
+}
+
+.nav-links .active {
+  color: #ffae00;
+  font-weight: bold;
+}
+.banner-services{
+  background: url(../images/services-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner_right_img{
+  max-height: 18rem;
+  width: auto;
+}
+.cta-btn{
+  border-radius: 8px;
+  border: none;
+}
+.custom-list{
+  list-style: none;
+  padding: 0;
+}
+.custom-list li {
+  position: relative;
+  padding-left: 30px;
+  line-height: 1.2;
+}
+
+.custom-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url('../images/tick.jpg'); /* your custom icon */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.card_services .card-header{
+  overflow: hidden;
+}
+.card_services img{
+  border-radius: 4px 4px 0 0;
+}
+.justify-center{justify-content: center;}
+.image-scale:hover,
+.scale:hover,
+.card_services:hover img{
+  scale: 1.05;
+  transition: all .5s ease;
+}
+.form-control{
+  padding: .5rem .75rem;
+}
+.text_hoverable:hover a,
+.text_hoverable:hover{
+  color: var(--primary) !important;
+}
+.contact_img{
+  max-height: 20rem;
+  object-fit: cover;
+}
+@media screen and (max-width: 1199px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 13px;
+  }
+  .mainSection {
+    padding-top: 5.25rem;
+}
+ .service_img{
+  max-height: 200px;
+  width: auto;
+  display: flex;
+  margin: auto;
+ }
+}
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 12px;
+  }
+  .font-34 {
+    font-size: 1.75rem;
+  }
+  .banner_right_img{
+    max-height: 16rem;
+  }
+  .service_img{
+    max-height: 180px;
+   }
+}
+@media screen and (max-width: 575px) {
+  .font-46 {
+    font-size: 1.875rem;
+  }
+  .banner_right_img{
+    max-height: 14rem;
+  }
+}
